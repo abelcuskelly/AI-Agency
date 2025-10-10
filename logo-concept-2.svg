@@ -1,0 +1,55 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="nodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- R letter -->
+  <path d="M40 40 L40 160 L80 160 L80 120 L100 120 L120 160 L140 160 L120 120 L100 100 L100 80 L120 80 L140 40 L120 40 L100 80 L80 80 L80 40 Z" 
+        fill="url(#rGradient)"/>
+  
+  <!-- Neural network connections -->
+  <g stroke="url(#nodeGradient)" stroke-width="2" fill="none" opacity="0.8">
+    <!-- Main connections from R -->
+    <line x1="100" y1="100" x2="130" y2="70"/>
+    <line x1="100" y1="100" x2="130" y2="130"/>
+    <line x1="100" y1="100" x2="70" y2="70"/>
+    <line x1="100" y1="100" x2="70" y2="130"/>
+    
+    <!-- Secondary nodes -->
+    <circle cx="130" cy="70" r="4" fill="url(#nodeGradient)"/>
+    <circle cx="130" cy="130" r="4" fill="url(#nodeGradient)"/>
+    <circle cx="70" cy="70" r="4" fill="url(#nodeGradient)"/>
+    <circle cx="70" cy="130" r="4" fill="url(#nodeGradient)"/>
+    
+    <!-- Tertiary connections -->
+    <line x1="130" y1="70" x2="150" y2="50"/>
+    <line x1="130" y1="70" x2="150" y2="90"/>
+    <line x1="130" y1="130" x2="150" y2="110"/>
+    <line x1="130" y1="130" x2="150" y2="150"/>
+    
+    <line x1="70" y1="70" x2="50" y2="50"/>
+    <line x1="70" y1="70" x2="50" y2="90"/>
+    <line x1="70" y1="130" x2="50" y2="110"/>
+    <line x1="70" y1="130" x2="50" y2="150"/>
+    
+    <!-- Final nodes -->
+    <circle cx="150" cy="50" r="3" fill="url(#nodeGradient)"/>
+    <circle cx="150" cy="90" r="3" fill="url(#nodeGradient)"/>
+    <circle cx="150" cy="110" r="3" fill="url(#nodeGradient)"/>
+    <circle cx="150" cy="150" r="3" fill="url(#nodeGradient)"/>
+    <circle cx="50" cy="50" r="3" fill="url(#nodeGradient)"/>
+    <circle cx="50" cy="90" r="3" fill="url(#nodeGradient)"/>
+    <circle cx="50" cy="110" r="3" fill="url(#nodeGradient)"/>
+    <circle cx="50" cy="150" r="3" fill="url(#nodeGradient)"/>
+  </g>
+  
+  <!-- Company name -->
+  <text x="100" y="180" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#667eea">RATIONA AI</text>
+</svg>
