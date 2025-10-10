@@ -846,3 +846,477 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* New Conversion Rate Optimization Styles */
+
+/* Urgency Banner */
+.urgency-banner {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+    text-align: center;
+    padding: 0.75rem 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+    position: relative;
+    overflow: hidden;
+    animation: pulse 2s infinite;
+}
+
+.urgency-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Timeline Section */
+.timeline-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.timeline-item {
+    text-align: center;
+    position: relative;
+}
+
+.timeline-marker {
+    background: var(--gradient-primary);
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 auto 1.5rem;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.timeline-content p {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.timeline-features {
+    list-style: none;
+    text-align: left;
+}
+
+.timeline-features li {
+    padding: 0.5rem 0;
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+/* Calculator Section */
+.calculator-section {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.calculator-widget {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: var(--shadow-xl);
+    margin-top: 3rem;
+    border: 1px solid #e9ecef;
+}
+
+.calculator-inputs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.input-group {
+    text-align: center;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.input-container input[type="range"] {
+    flex: 1;
+    height: 8px;
+    border-radius: 4px;
+    background: #e9ecef;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.input-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+}
+
+.input-value {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--primary);
+    min-width: 80px;
+    text-align: center;
+}
+
+.calculator-results {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.result-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+.result-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+}
+
+.result-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.savings-breakdown {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.savings-breakdown h4 {
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.breakdown-item:last-child {
+    border-bottom: none;
+}
+
+.breakdown-label {
+    color: var(--gray);
+}
+
+.breakdown-value {
+    font-weight: 600;
+    color: var(--success);
+}
+
+/* Success Stories Section */
+.success-stories {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.story-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid #e9ecef;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.company-logo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.story-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+}
+
+.story-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.metric {
+    text-align: center;
+}
+
+.metric-number {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    color: var(--gray);
+    line-height: 1.3;
+}
+
+.story-quote {
+    font-style: italic;
+    color: var(--gray);
+    margin: 1.5rem 0;
+    line-height: 1.6;
+    border-left: 3px solid var(--primary);
+    padding-left: 1rem;
+}
+
+.story-author {
+    margin-top: 1rem;
+}
+
+.story-author strong {
+    display: block;
+    color: var(--dark);
+    margin-bottom: 0.25rem;
+}
+
+.story-author span {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+/* Implementation Checklist Section */
+.implementation-checklist {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.checklist-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.checklist-item {
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    background: var(--gradient-primary);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin: 0 auto 1.5rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.step-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.step-content p {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.step-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.step-features li {
+    padding: 0.5rem 0;
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+.step-time {
+    background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+    border-radius: 8px;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.time-icon {
+    font-size: 1.1rem;
+}
+
+.implementation-cta {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 3rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+}
+
+.implementation-cta h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.implementation-cta p {
+    color: var(--gray);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Trust Indicators */
+.trust-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.trust-icon {
+    font-size: 1.2rem;
+}
+
+/* Responsive Design for New Sections */
+@media (max-width: 968px) {
+    .timeline {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .calculator-inputs {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .stories-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .story-metrics {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .checklist-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .trust-indicators {
+        gap: 1.5rem;
+    }
+    
+    .calculator-widget {
+        padding: 2rem;
+    }
+    
+    .story-card {
+        padding: 1.5rem;
+    }
+}
