@@ -116,16 +116,21 @@ const statsObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const stats = entry.target.querySelectorAll('.stat-value');
             stats.forEach(stat => {
-                const text = stat.textContent;
-                // Only animate if it contains numbers
-                if (/\d/.test(text)) {
-                    const number = parseInt(text.replace(/\D/g, ''));
+                const originalText = stat.textContent;
+                // Only animate if it contains numbers and is not already formatted
+                if (/\d/.test(originalText) && !originalText.includes('x') && !originalText.includes('%') && !originalText.includes('/')) {
+                    const number = parseInt(originalText.replace(/\D/g, ''));
                     if (number) {
                         stat.textContent = '0';
                         setTimeout(() => {
                             animateCounter(stat, number, 1500);
                         }, 200);
                     }
+                }
+                // For formatted stats, just show them immediately
+                else if (originalText.includes('x') || originalText.includes('%') || originalText.includes('/')) {
+                    // Keep the original formatted text
+                    stat.textContent = originalText;
                 }
             });
             statsObserver.unobserve(entry.target);
