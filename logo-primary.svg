@@ -1,0 +1,43 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="primaryBrainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="primaryCircuitGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Brain shape -->
+  <path d="M100 20 C60 20, 30 50, 30 90 C30 120, 50 140, 80 150 C90 160, 110 160, 120 150 C150 140, 170 120, 170 90 C170 50, 140 20, 100 20 Z" 
+        fill="url(#primaryBrainGradient)" 
+        stroke="none"/>
+  
+  <!-- Circuit patterns -->
+  <g stroke="url(#primaryCircuitGradient)" stroke-width="2" fill="none">
+    <!-- Horizontal lines -->
+    <line x1="50" y1="60" x2="150" y2="60"/>
+    <line x1="60" y1="80" x2="140" y2="80"/>
+    <line x1="70" y1="100" x2="130" y2="100"/>
+    <line x1="60" y1="120" x2="140" y2="120"/>
+    
+    <!-- Vertical connections -->
+    <line x1="80" y1="60" x2="80" y2="80"/>
+    <line x1="100" y1="80" x2="100" y2="100"/>
+    <line x1="120" y1="60" x2="120" y2="80"/>
+    <line x1="90" y1="100" x2="90" y2="120"/>
+    <line x1="110" y1="100" x2="110" y2="120"/>
+    
+    <!-- Connection nodes -->
+    <circle cx="80" cy="60" r="3" fill="url(#primaryCircuitGradient)"/>
+    <circle cx="100" cy="80" r="3" fill="url(#primaryCircuitGradient)"/>
+    <circle cx="120" cy="60" r="3" fill="url(#primaryCircuitGradient)"/>
+    <circle cx="90" cy="100" r="3" fill="url(#primaryCircuitGradient)"/>
+    <circle cx="110" cy="100" r="3" fill="url(#primaryCircuitGradient)"/>
+  </g>
+  
+  <!-- Company name -->
+  <text x="100" y="180" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#667eea">RATIONA</text>
+</svg>
