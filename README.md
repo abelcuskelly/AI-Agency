@@ -20,7 +20,7 @@ Enterprise-grade conversational AI for customer support, ticketing, and service 
 
 **Pricing:** Starting at $2,000/month
 
-### 2. AI Sales Agent (Coming Q2 2025)
+### 2. AI Sales Agent (December 2025 release)
 Intelligent sales automation for lead qualification, quote generation, and pipeline management.
 
 **Key Features:**
@@ -32,7 +32,7 @@ Intelligent sales automation for lead qualification, quote generation, and pipel
 
 **Pricing:** Starting at $3,000/month
 
-### 3. AI CFO & Operations Agent (Coming Q4 2025)
+### 3. AI CFO & Operations Agent (Expected February 2026)
 Intelligent financial and operational automation for forecasting, budgeting, and strategic decision-making.
 
 **Key Features:**
